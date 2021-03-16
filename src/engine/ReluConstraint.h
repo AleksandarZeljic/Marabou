@@ -40,7 +40,7 @@ public:
     /*
       Return a clone of the constraint.
     */
-    ContextDependentPiecewiseLinearConstraint *duplicateConstraint() const override;
+    ContextDependentPiecewiseLinearConstraint *duplicateConstraint() const ;
 
     /*
       Restore the state of this constraint from the given one.
@@ -105,19 +105,19 @@ public:
        The order of returned cases affects the search, and this method is where related
        heuristics should be implemented.
      */
-    List<PhaseStatus> getAllCases() const override;
+    List<PhaseStatus> getAllCases() const ;
 
     /*
        Returns case split corresponding to the given phase/id
        TODO: Update the signature in PiecewiseLinearConstraint, once the new
        search is integrated.
      */
-    PiecewiseLinearCaseSplit getCaseSplit( PhaseStatus phase ) const override;
+    PiecewiseLinearCaseSplit getCaseSplit( PhaseStatus phase ) const ;
 
     /*
       If the constraint's phase has been fixed, get the (valid) case split.
     */
-    PiecewiseLinearCaseSplit getImpliedCaseSplit() const override;
+    PiecewiseLinearCaseSplit getImpliedCaseSplit() const ;
 
     /*
       Check if the constraint's phase has been fixed.
