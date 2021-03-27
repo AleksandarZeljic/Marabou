@@ -251,7 +251,7 @@ protected:
     /*
        Bounds get/set wrappers
      */
-    inline bool existsLowerBound( unsigned var ) const 
+    inline bool existsLowerBound( unsigned var ) const
     {
       return _boundManager != nullptr || _lowerBounds.exists( var );
     }
